@@ -1,0 +1,128 @@
+/*Folha de Estilo*/
+
+/*
+seletor{
+    propriedade:valor;
+    }
+    */
+
+    :root{
+        --primary: #F24444;
+        --contrast:#182626;
+        --secondary:#F24444;
+        --gray: #666666;
+        --gray-ligth:#F2DFE2;
+
+    }
+
+   body{
+    height: 100vh;/*VH -> Unidade de medida relacionada à tela*/
+    margin:0;
+    background-image:linear-gradient(var(--primary),var(--gray));
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden; /*esconde a barra de rolagem*/
+
+
+   }
+
+   img{
+    width: 100px;
+    border-radius: 50%;
+    border: solid 5 px var (--primary);
+    /*border-width: 5px;
+    borde-color:var(--primary);
+    border-style: solid*/
+   }
+
+
+div{
+    width: 70%;
+    max-width: 340px; /*largura (400 - 60 do padding)*/
+    height: auto; /*altura*/
+    background-color: var(--gray-ligth);
+    margin: 50px auto; /*espacamento exteno-> vertical(top/bottom) horizontal (right/left)*/
+    padding: 30px;/*espacamento interno*/
+    text-align: center;
+    border-radius: 10px;
+
+}
+    h1{
+        font-size: 32px;
+        font-weight: 700;
+        color:var(--contrast);
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+h2{
+    margin-top: 0;
+    margin-bottom: 0;
+    color:var(--secondary);
+    font-size: 20px;
+}
+p{
+    margin-top: 10px;
+    color: var(--gray);
+}
+ul{
+    padding: 0;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    list-style-type:none;
+}
+
+li{
+    margin-bottom: 5px;
+    
+
+}
+ul a{
+    background-color: var(--primary);
+    color: white;
+    display: block;
+    text-decoration: none;
+    /*padding-top: 10px; 
+    padding-bottom: 10px;*/
+    padding:10px 0;
+    border-radius: 3px;
+ 
+}
+
+/*ao passar o mouse*/
+ul a:haver{
+    background-color: var(--contrast);
+
+}
+
+#app{
+    display: none;
+}
+
+@media (max-width: 414px){
+    img{
+        width:80px;
+
+    }
+    h1{
+        font-size: 28px;
+    }
+
+    #app{
+        display: block;
+    }
+
+    body{
+        overflow: auto; /*habilita a barra de rolagem do body*/
+
+    }
+
+}
+
+/*
+Elementos inline
+Dividem a mesma linha
+https://developer.mozila.org/pt-BR/docs/web/HTML/Inline_elements
+
+Elementos block
+ Ocupam a linha inteira
+ https://developer.mozila.org/pt-BR/docs/web/HTML/Inline_elements
+ */
